@@ -22,7 +22,7 @@ pipeline {
     
     stage ('Deploy-To-Tomcat') {
       steps {
-        sh 'cp target/*.war ~/prod/apache-tomcat-8.5.64/webapps/webapp.war'     
+        sh 'cp target/*.war /home/st16/prod/apache-tomcat-8.5.64/webapps/webapp.war'     
       }       
     }
     
