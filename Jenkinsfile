@@ -20,5 +20,11 @@ pipeline {
       }
     }
     
+    stage ('Deploy-To-Tomcat') {
+      steps {
+        sh 'cp -o StrictHostKeyChecking=no target/*.war /prod/apache-tomcat-8.5.64/webapps/webapp.war'     
+      }       
+    }
+    
   }
 }
